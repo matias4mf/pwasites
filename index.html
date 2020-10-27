@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EDESAL Movil</title>
+  <meta name="description" content="Test APIS en EDESAL Movil ">
+
+  <meta name="theme-color" content="#C7E3FF">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  
+  <link rel="shortcut icon" type="image/png" href="./img/edesal_movil_1024.png">
+  <link rel="apple-touch-icon" href="./edesal_movil_1024.png">
+  <link rel="apple-touch-startup-image" href="./edesal_movil_1024.png">
+  <link rel="manifest" href="./manifest.json">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="Header">
+    <h1>EDESAL Movil</h1>
+    <img src="./img/edesal_ppal.png" alt="EDESAL Movil">
+    <p>
+Página de testeo de Appis para EDESAL Movil
+    </p>
+
+  </header>
+  <main class="Main">
+<p>
+<a href="tel:0800222333725">llamar al 0800 222333725</a>
+</p>
+<p>
+ <img id="photo" class="photo">
+ </p>
+ <p>
+  <input type="file" accept="image/*" capture="camera" id="camera" />
+</p>
+<script>
+ const photo = document.querySelector('#photo');
+  const camera = document.querySelector('#camera');
+  camera.addEventListener('change', function(e) {
+    photo.src = URL.createObjectURL(e.target.files[0]);
+  });
+</script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
